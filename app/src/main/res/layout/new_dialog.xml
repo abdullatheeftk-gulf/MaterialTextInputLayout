@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:elevation="10dp"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_margin="4dp"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/dDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:text="Fri, July 10"
+            android:textColor="#1B1A1A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="10:45 PM"
+            android:textColor="#141313"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dDate" />
+
+        <Button
+            android:id="@+id/dSaveButton"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Save"
+            android:textColor="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="1500dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:src="#000000"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dTime" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:id="@+id/heading"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:hintTextColor="@color/colorAccent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:hint="Headline"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/dHeadingText"
+
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/note"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:hint="Enter note"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dNoteText"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:textAlignment="viewStart" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:weightSum="3"
+            android:layout_marginEnd="4dp"
+            android:background="#FBF7F7"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/note">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/dCamera"
+                android:contentDescription="TODO"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:src="@drawable/ic_camera"
+                android:layout_weight="1"
+                />
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/dLocation"
+                android:backgroundTint="#FF9800"
+                android:layout_height="wrap_content"
+                android:contentDescription="dd"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_add_location_24"/>
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/dImage"
+                android:layout_height="wrap_content"
+                android:contentDescription="dd"
+                android:backgroundTint="#E91E63"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_image_24"/>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
